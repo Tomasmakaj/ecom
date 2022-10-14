@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-    class MenusController < ApplicationController
 
         # GET /items
         
@@ -52,6 +51,5 @@ class ItemsController < ApplicationController
           def item_params
             params.fetch(:item, {})
           end
-      end
       
 end

@@ -16,7 +16,7 @@ Order.destroy_all
 
 
 puts "💰 Seeding User"
-tommy = User.create!(username: "Tommy", password: "123", )
+tommy = User.create!(username: "Tommy", password: "123", email:"Tommy@Gmail.com")
 
 puts "💰 Seeding Brand"
 yeezy_brand = Brand.create!(brand_name: "Yeezy")
