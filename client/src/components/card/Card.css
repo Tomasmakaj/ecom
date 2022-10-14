@@ -1,0 +1,231 @@
+.catalog {
+    margin: 4rem 0;
+    text-align: center;
+    max-width: 280px;
+    max-height: 450px;
+    margin: auto;
+    border-radius: 25px;
+    /* border: 2px solid #73AD21; */
+}
+
+.catalog button {
+    border: none;
+ outline: 0;
+ padding: 12px;
+ color: rgb(0, 0, 0);
+ background-color: #ffffff;
+ text-align: center;
+ cursor: pointer;
+ width: 100%;
+ font-size: 18px;
+ border-radius: 25px;
+ margin-top: 15px;
+ border: 2px solid black;
+}
+
+.img{
+    object-fit: cover;
+    height: inherit;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.catalog > div p {
+    margin: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.catalog {
+    font-weight: 700;
+}
+
+.catalog img {
+    width: 100%;
+}
+
+@media screen and (max-width:940px) {
+    .catalog {
+        margin: 1rem 0;
+    }
+
+    .catalog > div p {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    .catalog .container {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .catalog > div p {
+        margin: 1rem .5rem;
+    }
+}
+
+.card {
+    margin: 4rem 0;
+    text-align: center;
+    max-width: 300px;
+    max-height: 500px;
+    margin: auto;
+    border-radius: 25px;
+    /* border: 2px solid #73AD21; */
+}
+
+.card button {
+    border: none;
+ outline: 0;
+ padding: 12px;
+ color: white;
+ background-color: #009245;
+ text-align: center;
+ cursor: pointer;
+ width: 100%;
+ font-size: 18px;
+ border-radius: 25px;
+ margin-top: 15px;
+}
+
+.img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    border-radius: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card > div p {
+    margin: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.card {
+    font-weight: 700;
+}
+
+.card img {
+    width: 100%;
+}
+
+@media screen and (max-width:940px) {
+    .card {
+        margin: 1rem 0;
+    }
+
+    .card > div p {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    .card .container {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .card > div p {
+        margin: 1rem .5rem;
+    }
+}
+
+/* .card {
+    margin: 4rem 0;
+    text-align: center;
+    max-width: 300px;
+    max-height: 500px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.card button {
+    border: none;
+ outline: 0;
+ padding: 12px;
+ color: white;
+ background-color: #009245;
+ text-align: center;
+ cursor: pointer;
+ width: 100%;
+ font-size: 18px;
+ border-radius: 25px;
+ margin-top: 15px;
+}
+
+.img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    border-radius: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card > div p {
+    margin: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.card {
+    font-weight: 700;
+}
+
+.card img {
+    width: 100%;
+}
+
+@media screen and (max-width:940px) {
+    .card {
+        margin: 1rem 0;
+    }
+
+    .card > div p {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    .card .container {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .card > div p {
+        margin: 1rem .5rem;
+    }
+} */
