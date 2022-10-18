@@ -12,6 +12,11 @@ const ItemContainer = ({filter, setFilter, user, userCart, setUserCart}) => {
         .then(data => setItem(data))
     }, [])
 
+    let handleChange = (e) => {
+        setFilter(e.target.value);
+      };
+
+
   return (
 
     <div id='item' className="item-container">
@@ -20,6 +25,11 @@ const ItemContainer = ({filter, setFilter, user, userCart, setUserCart}) => {
                 <input type='text' placeholder='Enter Keyword..' value={filter} onChange={(e) => setFilter(e.target.value)} />
             </div>
         </form>
+            <div className='options'>
+                <button className='btn'>Shoes</button>
+                <button className='btn'>Collectibles</button>
+                <button className='btn'>Electronics</button>
+            </div>
         <div className='cards'>
             {item.map((catalogitem=><Card key={catalogitem.id} catalogitem={catalogitem} userCart={userCart} setUserCart={setUserCart} />))}
         </div>

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+   --color-primary: #4db5ff;
 }
 
 ul {
@@ -33,7 +34,7 @@ body {
 .btn1 {
   color: black;
   background-color: white;
-  height: 50px;
+  height: 70px;
   padding: 0 24px;
   border: 2px solid black;
   border-radius: 8px;
