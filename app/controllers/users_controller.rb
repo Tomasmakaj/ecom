@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     # LOGIN
       
     def login
-        user = User.find_by!(username: params[:username]).try(:authenticate, params[:password])
+        user = User.find_by!(email: params[:username]).try(:authenticate, params[:password])
         if user
           token = encode(user.id)
           render json: {user: user, token: token}

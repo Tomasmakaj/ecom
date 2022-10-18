@@ -6,7 +6,7 @@ import {GiTakeMyMoney} from 'react-icons/gi'
 import {FaRegTimesCircle} from 'react-icons/fa'
 import {HiOutlineMenuAlt4, HiShoppingCart} from 'react-icons/hi'
 
-const Navbar = ({isLoginPop, setIsLoginPop, makePopup}) => {
+const Navbar = ({isLoginPop, setIsLoginPop, makePopup,}) => {
      
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)

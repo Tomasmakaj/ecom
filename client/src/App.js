@@ -13,13 +13,23 @@ const App = () => {
   const [user, setUser] = useState({ username: ""});
   const [userCart, setUserCart] = useState ([])
   const [isLoginPop, setIsLoginPop] = useState(false)
-  
-  const [itemArr, setItemArr] = useState([])
-  const [filter, setFilter] = useState ([""])
 
   // const [shoe, setShoe] = useState ([])
   // const [collectible, setCollectible] = useState ([])
   // const [electronic, setElectronic] = useState ({})
+  
+  // const [itemArr, setItemArr] = useState([])
+  // const [search, setSearch] = useState ("")
+
+  // useEffect(() => {
+  //   fetch("http://127.0.0.1:3000/items")
+  //   .then((res) => res.json())
+  //   .then((data) => setItemArr(data))
+  // }, []);
+
+  // let filtered = itemArr.filter((item) =>
+  //   item.name.toLowerCase().includes(search.toLowerCase())
+  // );
 
   useEffect(() => {
     let token = localStorage.getItem("jwt")
@@ -50,7 +60,7 @@ const App = () => {
       {isLoginPop&& <Auth setIsLoginPop={setIsLoginPop} isLoginPop={isLoginPop} user={user} setUser={setUser} />}
       <Navbar makePopup={makePopup} setIsLoginPop={setIsLoginPop} isLoginPop={isLoginPop} user={user} setUser={setUser} userCart={userCart} setUserCart={setUserCart} />
       <Hero />
-      <ItemContainer filter={filter} setFilter={setFilter} user={user} userCart={userCart} setUserCart={setUserCart} />
+      <ItemContainer user={user} userCart={userCart} setUserCart={setUserCart} />
       <Contact />
       <Footer />
       </div>

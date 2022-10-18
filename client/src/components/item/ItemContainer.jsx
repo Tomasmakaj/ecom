@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Card from '../card/Card';
 import './ItemContainer.css'
 
-const ItemContainer = ({filter, setFilter, user, userCart, setUserCart}) => {
+const ItemContainer = ({filter, setFilter, filtered, user, userCart, setUserCart}) => {
 
     const [item, setItem] = useState([]);
 
@@ -12,9 +12,9 @@ const ItemContainer = ({filter, setFilter, user, userCart, setUserCart}) => {
         .then(data => setItem(data))
     }, [])
 
-    let handleChange = (e) => {
-        setFilter(e.target.value);
-      };
+    // let handleChange = (e) => {
+    //     setFilter(e.target.value);
+    //   };
 
 
   return (
@@ -26,6 +26,7 @@ const ItemContainer = ({filter, setFilter, user, userCart, setUserCart}) => {
             </div>
         </form>
             <div className='options'>
+                <button className='btn'>All</button>
                 <button className='btn'>Shoes</button>
                 <button className='btn'>Collectibles</button>
                 <button className='btn'>Electronics</button>

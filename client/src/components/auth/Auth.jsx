@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Auth.css'
 
 
 const Auth = ({setIsLoginPop, isLoginPop, user, setUser}) => {
         
+    const navigate = useNavigate()
     
     const [isSignUp, setIsSignUp] = useState (false)
     const [form, setForm] = useState ({})
@@ -27,6 +29,8 @@ const Auth = ({setIsLoginPop, isLoginPop, user, setUser}) => {
                     setUser({
                         username: data.user.username
                     });
+                    navigate('/home')
+                    setIsLoginPop(prev => !prev)
                 }else{
                     alert(data["error"])
                 }
@@ -46,7 +50,7 @@ const Auth = ({setIsLoginPop, isLoginPop, user, setUser}) => {
           };
 
             const [newUser, setNewUser] = useState({
-                username: '',
+                email: '',
                 password: '',
         });
     
@@ -100,13 +104,12 @@ const Auth = ({setIsLoginPop, isLoginPop, user, setUser}) => {
             <p>OR</p>
             <div></div>
         </div>
-        <form onSubmit={(e)=> {e.preventDefault(); user()}}>
+        <form onSubmit={handleSubmit}>
 
         {
         isSignUp&& <div id='signup-container'>
-        <input type='text' name='first_name' onChange={(e)=> {handleChange(e.target.name, e.target.value)}} placeholder='First Name'/>
-        <input type='text' name='last_name' onChange={(e)=> {handleChange(e.target.name, e.target.value)}} placeholder='Last Name'/>
         </div>
+
         }
         <input type='email' onChange={(e)=> {handleChange(e.target.name, e.target.value)}} name='username' placeholder='Email' />
         <input type='password' onChange={(e)=> {handleChange(e.target.name, e.target.value)}} name='password' placeholder='Password'/>
