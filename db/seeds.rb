@@ -13,6 +13,14 @@ Category.destroy_all
 Item.destroy_all
 Cart.destroy_all
 Order.destroy_all
+Location.destroy_all
+
+
+puts "💰 Seeding Location"
+
+location_1 = Location.create(address: "200 Broadway St, New York, NY 10038")
+location_2 = Location.create(address: "409 Fulton St, Brooklyn, NY 11201")
+location_3 = Location.create(address: "1 W 125th St, New York, NY 10027")
 
 
 puts "💰 Seeding User"

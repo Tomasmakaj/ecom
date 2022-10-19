@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Card from '../card/Card';
 import './ItemContainer.css'
 
-const ItemContainer = ({filter, setFilter, filtered, user, userCart, setUserCart}) => {
+const ItemContainer = ({user, userCart, setUserCart}) => {
 
     const [item, setItem] = useState([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         fetch('http://localhost:3000/items')
@@ -12,9 +13,10 @@ const ItemContainer = ({filter, setFilter, filtered, user, userCart, setUserCart
         .then(data => setItem(data))
     }, [])
 
-    // let handleChange = (e) => {
-    //     setFilter(e.target.value);
-    //   };
+    const filtered = item.filter((item) =>
+    item.item_name.toLowerCase().includes(search.toLowerCase())
+    );
+
 
 
   return (
@@ -22,7 +24,7 @@ const ItemContainer = ({filter, setFilter, filtered, user, userCart, setUserCart
     <div id='item' className="item-container">
         <form className="search" onSubmit={(e) => e.preventDefault()}>
             <div>
-                <input type='text' placeholder='Enter Keyword..' value={filter} onChange={(e) => setFilter(e.target.value)} />
+                <input type='text' placeholder='Enter Keyword..' onChange={(e) => setSearch(e.target.value)} />
             </div>
         </form>
             <div className='options'>
@@ -32,7 +34,7 @@ const ItemContainer = ({filter, setFilter, filtered, user, userCart, setUserCart
                 <button className='btn'>Electronics</button>
             </div>
         <div className='cards'>
-            {item.map((catalogitem=><Card key={catalogitem.id} catalogitem={catalogitem} userCart={userCart} setUserCart={setUserCart} />))}
+            {filtered.map((catalogitem=><Card key={catalogitem.id} catalogitem={catalogitem} userCart={userCart} setUserCart={setUserCart} />))}
         </div>
     </div>
 
