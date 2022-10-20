@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AiOutlineHome} from 'react-icons/ai'
-import {MdOutlineLocationSearching} from 'react-icons/md'
+import {AiOutlineMessage} from 'react-icons/ai'
 import { SiHyperledger } from 'react-icons/si'
 import {GiTakeMyMoney} from 'react-icons/gi'
 import {HiOutlineMenuAlt4, HiShoppingCart} from 'react-icons/hi'
@@ -28,9 +28,9 @@ const Navbar = ({setUser,user,userCart,setUserCart}) => {
         <div className='navbar'>
             <div className='container'>
                 <h1><span><GiTakeMyMoney /> The </span> Hype Hut </h1>
-                    <a href="#/"><AiOutlineHome size={'2em'}/></a>
+                    <a href="#home"><AiOutlineHome size={'2em'}/></a>
                     <a href="#item"><SiHyperledger size={'2em'}/></a>
-                    <a href="#footer"><MdOutlineLocationSearching size={'2em'}/></a>
+                    <a href="#contact"><AiOutlineMessage size={'2em'}/></a>
                     <button onClick={()=>setIsShowingSignIn(true)} className ='btn'>Sign In</button>
                     <button onClick={()=>setIsShowingSignUp(true)} className ='btn'>Sign Up</button>
                     <h1><button onClick={showCart} className ='btn'><HiShoppingCart /></button></h1>

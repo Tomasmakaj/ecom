@@ -27,12 +27,6 @@ const ItemContainer = ({user, userCart, setUserCart}) => {
                 <input type='text' placeholder='Enter Keyword..' onChange={(e) => setSearch(e.target.value)} />
             </div>
         </form>
-            <div className='options'>
-                <button className='btn'>All</button>
-                <button className='btn'>Shoes</button>
-                <button className='btn'>Collectibles</button>
-                <button className='btn'>Electronics</button>
-            </div>
         <div className='cards'>
             {filtered.map((catalogitem=><Card key={catalogitem.id} catalogitem={catalogitem} userCart={userCart} setUserCart={setUserCart} />))}
         </div>
