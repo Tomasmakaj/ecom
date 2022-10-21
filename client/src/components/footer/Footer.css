@@ -6,8 +6,10 @@ footer {
     margin-top: 7rem;
   }
   
-  footer a {
-    color: var(--color-bg);
+  footer a:hover {
+    background: transparent;
+    color: white;
+    border-color: var(--color-bg);
   }
   
   .footer__logo {
@@ -43,7 +45,7 @@ footer {
   
   .footer__socials a:hover {
     background: transparent;
-    color: var(--color-bg);
+    color: white;
     border-color: var(--color-bg);
   }
   

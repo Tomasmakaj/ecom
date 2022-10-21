@@ -3,6 +3,7 @@ import './Contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com'
+import Swal from 'sweetalert2'
 
 const Contact = () => {
   const form = useRef();
@@ -17,6 +18,11 @@ const Contact = () => {
           console.log(error.text);
       });
       e.target.reset()
+      Swal.fire(
+        'Good job!',
+        'Your message has been sent!',
+        'success'
+      )
   };
 
   return (
@@ -36,7 +42,7 @@ const Contact = () => {
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required ></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <button  type='submit' className='btn btn-primary'>Send Message</button>
             </form>
        {/* <form ref={form} onSubmit={sendEmail}>
       <label>Subject</label>

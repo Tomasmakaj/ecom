@@ -7,7 +7,7 @@
 
 .products {
   position: relative;
-  left: 45%;
+  left: 51%;
   transform: translate(-35%);
   padding-bottom: 5vh;
 }
@@ -73,6 +73,14 @@ textarea {
   resize: none;
   color: var(--color-white);
 }
+
+element.style{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
 
 @media screen and (max-width: 1024px) {
     .dm {
